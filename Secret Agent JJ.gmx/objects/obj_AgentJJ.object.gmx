@@ -74,9 +74,9 @@
             <string>// flow movement
 if keyboard_check(ord("W")) &amp;&amp; place_free(x,y-5) {y-=6} 
 if keyboard_check(ord("S")) &amp;&amp; place_free(x,y+5) {y+=6}
-if keyboard_check(ord("D")) &amp;&amp; place_free(x+5,y) {x+=6} direction += 3; 
-if keyboard_check(ord("A")) &amp;&amp; place_free(x-5,y) {x-=6} direction -= 3;
-image_angle = direction;
+if keyboard_check(ord("D")) &amp;&amp; place_free(x+5,y) {x+=6} 
+if keyboard_check(ord("A")) &amp;&amp; place_free(x-5,y) {x-=6}
+
 </string>
           </argument>
         </arguments>

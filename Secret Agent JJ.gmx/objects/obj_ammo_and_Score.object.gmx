@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>global.ammo = 20;
+
+score = 0;
 </string>
           </argument>
         </arguments>
@@ -73,7 +75,10 @@
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_white)
-draw_text(10,5,"Ammo " + string(global.ammo))
+draw_text(view_wview/2+view_xview+32,view_yview+2,"Ammo " + string(global.ammo))
+
+draw_set_color(c_white)
+draw_text(view_xview+view_wview-75,view_yview+2,"Points " + string(score))
 
 </string>
           </argument>
