@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,12 +25,146 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(obj_healthbar)
+            <string>global.ammo = 20;
+
+score = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Cheat Code</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if keyboard_check_pressed(ord("C"))
 {
-x = (obj_AgentJJ.x + 13)
-y = (obj_AgentJJ.y + 13)
+cheat = get_string("Enter Cheat Code Below","")
+
+    if cheat = "heal"
+    {
+        health += 100;
+    }
+    else if cheat = "score"
+    {
+        score += 1000;
+    }
+    else if cheat = "Big Daddy"
+    {
+        global.ammo += 99999999999999999999999999999999999999999999
+    }
+    else if cheat = "Ammo"
+    {
+        global.ammo += 15
+    }
+    else if cheat = "Ammo2"
+    {
+        global.ammo += 30
+    }
+    else if cheat = "Ammo3"
+    {
+        global.ammo += 45
+    }
+    else if cheat = "Ammo4"
+    {
+        global.ammo += 60
+    }
+    else if cheat = "Ammo5"
+    {
+        global.ammo += 75
+    }
+    else if cheat = "Ammo6"
+    {
+        global.ammo += 90
+    }
+    else if cheat = "Ammo7"
+    {
+        global.ammo += 105
+    }
+    else if cheat = "Ammo8"
+    {
+        global.ammo += 120
+    }
+    else show_message("This is not a cheat code!")
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Health Bar</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>109</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_move_to</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>obj_AgentJJ.x + 13</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>obj_AgentJJ.y + 13</string>
           </argument>
         </arguments>
       </action>
@@ -122,6 +256,30 @@ y = (obj_AgentJJ.y + 13)
       </action>
     </event>
     <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>526</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_font</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>12</kind>
+            <font>fnt_Comic</font>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>723</id>

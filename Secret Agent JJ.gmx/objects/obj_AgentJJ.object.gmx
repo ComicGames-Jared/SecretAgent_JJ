@@ -101,7 +101,6 @@ if keyboard_check(ord("A")) &amp;&amp; place_free(x-5,y) {x-=6}
             <kind>1</kind>
             <string>score += 10;
 
-instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -149,10 +148,39 @@ alarm[0] = 5;
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>draw_set_color(c_white)
+draw_text(view_wview/2+view_xview+32,view_yview+2,"Ammo " + string(global.ammo))
+
+draw_set_color(c_white)
+draw_text(view_xview+view_wview-75,view_yview+2,"Points " + string(score))
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>if (file_exists("Save.sav")) file_delete("Save.sav");
 var SaveFile = file_text_open_write("Save.sav");
-var SavedRoom = room
-file_text_write_real(SaveFile,SavedRoom)
+file_text_write_real(SaveFile, room);
+file_text_writeln(SaveFile);
+file_text_write_real(SaveFile, global.ammo);
+file_text_writeln(SaveFile);
+file_text_write_real(SaveFile, score);
 file_text_close(SaveFile);
 </string>
           </argument>
